@@ -1,4 +1,7 @@
 import streamlit as st
+import os
+import pandas as pd
+
 
 from modules.module1 import Chart_1
 from modules.module2 import Chart_2
@@ -8,6 +11,15 @@ from modules.module5 import Chart_5
 from modules.module6 import Chart_6
 from modules.module7 import Chart_7
 from modules.module8 import Chart_8
+
+
+# Inicializa la variable de sesión
+if "page" not in st.session_state:
+    st.session_state.page = "main"
+
+# Redirige al dashboard si la variable de sesión cambia
+if st.session_state.page == "dashboard":
+    st.switch_page("pages/dashboard.py")
 
 
 st.sidebar.header("Select a Visualization")
@@ -51,3 +63,27 @@ elif option == "8. Correlation Heatmap":
 
 else:
     st.write("Select an option from the menu to visualize the chart.")
+
+
+
+# Botón para cambiar de página
+if st.button("Go to Dashboard"):
+    st.session_state.page = "dashboard"
+    st.rerun()
+
+# Add button to show code with GitHub logo
+st.markdown(
+    """
+    <a href="https://github.com/Didark8810/INFO6151-Project-1" target="_blank">
+        <button style="background-color:#24292e; color:white; border:none; padding:10px 15px; font-size:16px; border-radius:5px; cursor:pointer;">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" style="vertical-align:middle; margin-right:10px;">
+            Show Code
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
+st.write("Base information about the dataset Stores.csv")
+
+df = pd.read_csv('data/Stores.csv')
+st.write(df.head(15))
