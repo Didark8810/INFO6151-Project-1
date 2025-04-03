@@ -13,15 +13,16 @@ from modules.module7 import Chart_7
 from modules.module8 import Chart_8
 
 
-# Inicializa la variable de sesión
+#redirection to the dashboard page
 if "page" not in st.session_state:
     st.session_state.page = "main"
 
-# Redirige al dashboard si la variable de sesión cambia
+
 if st.session_state.page == "dashboard":
     st.switch_page("pages/dashboard.py")
 
 
+#code to selecct the visualization
 st.sidebar.header("Select a Visualization")
 option = st.sidebar.selectbox(
     "Select your chart:",
@@ -62,16 +63,21 @@ elif option == "8. Correlation Heatmap":
     Chart_8()
 
 else:
-    st.write("Select an option from the menu to visualize the chart.")
+    st.write(" ")
 
 
+st.write("INFO-6151 Data Visualization for Machine Learning")
+st.write("Group #: 4-Group Members:")
+st.write("- Abdallah Waked")
+st.write("- Xavier Merino Mino")  
+st.write("- Diego Bernal")  
 
-# Botón para cambiar de página
+#buttons
 if st.button("Go to Dashboard"):
     st.session_state.page = "dashboard"
     st.rerun()
 
-# Add button to show code with GitHub logo
+# GitHub logo
 st.markdown(
     """
     <a href="https://github.com/Didark8810/INFO6151-Project-1" target="_blank">
@@ -83,6 +89,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 st.write("Base information about the dataset Stores.csv")
 
 df = pd.read_csv('data/Stores.csv')
