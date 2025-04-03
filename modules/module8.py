@@ -6,7 +6,7 @@ import plotly.express as px
 import numpy as np
 
 def Chart_8():
-    st.title("Correlation Matrix Heatmap")
+    st.title("CH8-Correlation Matrix Heatmap")
 
     # Load data
     df = pd.read_csv("data/Stores.csv")

@@ -64,7 +64,7 @@ def box_plot(fig_size, data_x, data_y, title, x_label, y_label, linewidth=1, mar
 def Chart_5():
 
     # Application title
-    st.title("Store Sales Distribution Analysis")
+    st.title("CH5-Store Sales Distribution Analysis")
 
     # Load data
     df = pd.read_csv('data/Stores.csv')

@@ -10,10 +10,6 @@ from modules.module7 import Chart_7
 from modules.module8 import Chart_8
 
 
-
-
-
-st.write("Select an option from the menu to visualize the chart. dashboard.py")
 Chart_1()
 Chart_2()
 Chart_3()

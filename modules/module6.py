@@ -30,7 +30,7 @@ def bar_plot(fig_size, data_x, data_y, title, x_label, y_label, colors=['skyblue
 def Chart_6():
 
     # Application title
-    st.title("Average Daily Customer Count by Store Area")
+    st.title("CH6-Average Daily Customer Count by Store Area")
 
     # Load data
     df = pd.read_csv('data/Stores.csv')

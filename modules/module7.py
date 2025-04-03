@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 from statsmodels.tsa.arima.model import ARIMA
 
 def Chart_7():
-    st.title("Store Sales Trend Over Time")
+    st.title("CH7-Store Sales Trend Over Time")
 
     # Load Data
     df = pd.read_csv("data/Stores.csv")

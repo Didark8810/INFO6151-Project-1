@@ -81,7 +81,7 @@ def neural_network(hidden_layer_sizes, max_iter, activation, X_train, y_train, X
 
 def Chart_4():
     # Application title
-    st.title("Relationship between Daily Customer Count and Store Sales")
+    st.title("CH4-Relationship between Daily Customer Count and Store Sales")
 
     # Load data
     df = pd.read_csv('data/Stores.csv')

@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 def Chart_1():
 
     
-    st.title("Distribution of Store Area")
+    st.title("CH1-Distribution of Store Area")
     df = pd.read_csv('data/Stores.csv')
     store_areas = df[['Store_Area']]
 

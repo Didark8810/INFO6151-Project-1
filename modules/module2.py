@@ -15,7 +15,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def Chart_2():
-    st.title("Relationship between Store Area and Daily Customer Count")
+    st.title("CH2-Relationship between Store Area and Daily Customer Count")
     
     df = pd.read_csv('data/Stores.csv')
 

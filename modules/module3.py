@@ -5,7 +5,7 @@ from sklearn.preprocessing import KBinsDiscretizer
 
 def Chart_3():
     
-    st.title("Distribution of Items Available ")
+    st.title("CH3-Distribution of Items Available ")
 
     
     df = pd.read_csv('data/Stores.csv')
