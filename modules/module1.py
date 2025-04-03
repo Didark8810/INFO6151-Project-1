@@ -16,6 +16,11 @@ def Chart_1():
     # Apply K-Means
     kmeans = KMeans(n_clusters=n_clusters, n_init=10, random_state=42)
     df['Cluster'] = kmeans.fit_predict(store_areas)
+    
+    cluster_counts = df['Cluster'].value_counts().sort_index()
+    st.subheader("Number of Stores in Each Cluster::")
+    st.write(cluster_counts)
+
 
     # one
     fig2, ax2 = plt.subplots(figsize=(10, 6))
