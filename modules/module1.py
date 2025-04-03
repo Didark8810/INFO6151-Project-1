@@ -30,7 +30,7 @@ def Chart_1():
     ax1.grid(True)
 
     # Show the histogram in Streamlit
-    st.pyplot(fig1)
+    st.plotly_chart(fig1)
 
     # Create scatter plot of clusters
     fig2, ax2 = plt.subplots(figsize=(10, 6))

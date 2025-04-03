@@ -11,7 +11,8 @@ def Chart_3():
     df = pd.read_csv('data/Stores.csv')
 
     # Define the available items ranges
-    n_bins = 5  # Number of ranges (you can adjust this)
+    n_bins = st.slider("Select the number of clusters", min_value=2, max_value=20, value=5)
+    #n_bins = 5  # Number of ranges (you can adjust this)
     binning = KBinsDiscretizer(n_bins=n_bins, encode='ordinal', strategy='uniform')
 
     # Apply discretization to create ranges

@@ -48,4 +48,4 @@ def Chart_2():
     st.write(f"**Regression Line Equation:** y = {model.coef_[0]:.2f}x + {model.intercept_:.2f}")
 
     # Show the figure in Streamlit
-    st.pyplot(fig)
+    st.plotly_chart(fig)
